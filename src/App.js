@@ -37,17 +37,19 @@ function App() {
           </Toolbar>
         </AppBar>
 
-        <Switch>
-          <Route path="/feed">
-            <NewsFeed />
-          </Route>
-          <Route path="/profile">
-            <Profile />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <div style={{ width: '90%', margin: 'auto', marginTop: '20px' }}>
+          <Switch>
+            <Route path="/feed">
+              <NewsFeed />
+            </Route>
+            <Route path="/profile">
+              <Profile />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
       </div>
     </Router>
   );
