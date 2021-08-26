@@ -1,14 +1,17 @@
 {
-    "profile": {
-        "firstName": "Jacob",
-        "lastName": "Plumb",
-        "age": 30
-    },
-    "posts": [
-        {
-            "time": "1630003058139",
-            "postBody": "Omg This Is A Post",
-            "likes": 1
-        }
-    ]
+	"profile": {
+        "id": 1,
+		"firstName": "Something",
+		"lastName": "Plumb",
+		"age": 30
+	},
+	"posts": [
+		{
+			"id": 1,
+			"time": "Aug 1, 2021 3:00 PM",
+			"postBody": "Omg This Is A Post",
+			"likes": 1,
+            "userId": 1
+		}
+	]
 }

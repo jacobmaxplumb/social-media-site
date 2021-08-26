@@ -9,6 +9,9 @@ import { AppBar, makeStyles, Toolbar } from '@material-ui/core';
 import Home from './components/Home';
 import NewsFeed from './components/NewsFeed';
 import Profile from './components/Profile';
+import { connect } from 'react-redux';
+import { getProfile } from './actions/profile.actions';
+import { getPostsAsync } from './actions/feed.actions';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function App() {
+function App(props) {
   const classes = useStyles();
   return (
     <Router>
@@ -32,8 +35,8 @@ function App() {
         <AppBar position="static">
           <Toolbar>
             <Link className={classes.menuButton} to="/">Home</Link>
-            <Link className={classes.menuButton} to="/profile">Profile</Link>
-            <Link className={classes.menuButton} to="/feed">News Feed</Link>
+            <Link className={classes.menuButton} to="/profile" onClick={() => props.getProfile()}>Profile</Link>
+            <Link className={classes.menuButton} to="/feed" onClick={() => props.getPostsAsync()}>News Feed</Link>
           </Toolbar>
         </AppBar>
 
@@ -53,4 +56,4 @@ function App() {
   );
 }
 
-export default App;
+export default connect(null, { getProfile, getPostsAsync })(App);
