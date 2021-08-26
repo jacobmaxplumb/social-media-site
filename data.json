@@ -1,0 +1,14 @@
+{
+    "profile": {
+        "firstName": "Jacob",
+        "lastName": "Plumb",
+        "age": 30
+    },
+    "posts": [
+        {
+            "time": "1630003058139",
+            "postBody": "Omg This Is A Post",
+            "likes": 1
+        }
+    ]
+}
