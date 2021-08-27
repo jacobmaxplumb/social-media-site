@@ -1,14 +1,24 @@
 {
-    "profile": {
-        "firstName": "Jacob",
-        "lastName": "Plumb",
-        "age": 30
+  "profile": {
+    "firstName": "Jacob",
+    "lastName": "Plumb",
+    "age": 30,
+    "id": 1
+  },
+  "posts": [
+    {
+      "time": "Aug 1, 2021 3:00 PM",
+      "postBody": "Omg This Is A Post",
+      "likes": 1,
+      "userId": 1,
+      "id": 1
     },
-    "posts": [
-        {
-            "time": "1630003058139",
-            "postBody": "Omg This Is A Post",
-            "likes": 1
-        }
-    ]
+    {
+      "time": "Aug 2, 2021 3:00 PM",
+      "postBody": "Omg This Is Another Post",
+      "likes": 0,
+      "userId": 1,
+      "id": 2
+    }
+  ]
 }
