@@ -10,6 +10,8 @@ import Home from './components/Home';
 import NewsFeed from './components/NewsFeed';
 import Profile from './components/Profile';
 import { connect } from 'react-redux';
+import { getProfileAsync } from './actions/profile.actions'
+import { getPostsAsync } from './actions/feed.actions';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,8 +35,8 @@ function App(props) {
         <AppBar position="static">
           <Toolbar>
             <Link className={classes.menuButton} to="/">Home</Link>
-            <Link className={classes.menuButton} to="/profile">Profile</Link>
-            <Link className={classes.menuButton} to="/feed">News Feed</Link>
+            <Link className={classes.menuButton} to="/profile" onClick={() => props.getProfileAsync()}>Profile</Link>
+            <Link className={classes.menuButton} to="/feed" onClick={() => props.getPostsAsync()}>News Feed</Link>
           </Toolbar>
         </AppBar>
 
@@ -66,4 +68,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { })(App);
+export default connect(mapStateToProps, { getProfileAsync, getPostsAsync })(App);
